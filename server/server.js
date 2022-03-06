@@ -10,7 +10,7 @@ const workerRoute =require('./Route/Workers-Routes')
 const userRoute =require('./Route/Users-Routes')
 const app = express();
 app.use(express.json())
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT)
 app.use(passport.initialize());
 app.use(cors()) 
